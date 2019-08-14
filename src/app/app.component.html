@@ -1,0 +1,23 @@
+<h1>{{title}}</h1>
+<!-- assigning value to anachore tag href using interpolation -->
+Site : <a href={{site}}>{{site}}</a> <br> <br>
+
+inside the "" :<a href="{{site}}">{{site}}</a> <br> <br>
+<!-- interpolation is a special syntax that Angular converts into a property binding. -->
+MoreInfo :{{MoreInfo}}
+
+<h4>Some more sites for angular and Html</h4>
+<ul>
+        <!-- Don't forget the leading asterisk (*) in *ngFor -->
+        <!-- ngFor can repeat items for any iterable object. -->
+    <li *ngFor="let item of moreSite"> <a href="{{item.Url}}">{{item.Name}}</a></li>
+</ul>
+<!-- Don't forget the leading asterisk (*) in *ngIf. It is an essential part of the syntax. -->
+<p *ngIf="moreSite"> array length is more than one</p>
+
+<h4>Data from one More Example</h4>
+<ul >
+    <li *ngFor="let item of oneMoreExample" ><a href="{{item.Url}}">{{item.Name}}</a></li>
+</ul>
+<!-- Angular isn't showing and hiding the message. It is adding and removing the paragraph element from the DOM. That improves performance -->
+<p *ngIf="oneMoreExample.length > 2"> array length is more than two</p>
